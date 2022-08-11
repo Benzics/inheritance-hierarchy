@@ -61,3 +61,11 @@ test_account.debit(97.5)
 
 # print account balance
 print("Account balance is: ", test_account.get_balance())
+
+
+# Test for Savings_Account
+test_savings_account = Savings_Account(100, 10)
+
+interest = test_savings_account.calculate_interest()
+test_savings_account.credit(interest)
+print('Savings account balance is: ', test_savings_account.get_balance())
