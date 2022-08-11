@@ -25,4 +25,4 @@ class Account:
 class Savings_Account(Account):
     def __init__(self, balance, interest):
         super().__init__(balance)
-        self.interest = interest
+        self.interest = float(interest)
