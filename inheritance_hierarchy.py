@@ -39,5 +39,5 @@ class Checking_Account(Account):
 
     #subtracts fee from the account balance
     def credit(self, amount):
-        self.balance += amount
+        super().credit(amount)
         self.balance -= self.fee
