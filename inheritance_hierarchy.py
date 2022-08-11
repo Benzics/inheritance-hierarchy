@@ -5,3 +5,7 @@ class Account:
             self.balance = float(0.0)
         else:
             self.balance = float(balance)
+
+        #credit method to add to the account balance
+        def credit(self, amount):
+            self.balance += float(amount)
