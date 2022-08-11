@@ -16,3 +16,7 @@ class Account:
                 print("Insufficient funds")
             else:
                 self.balance -= float(amount)
+
+        #returns the current balance
+        def get_balance(self):
+            return self.balance
