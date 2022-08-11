@@ -36,3 +36,8 @@ class Checking_Account(Account):
     def __init__(self, balance, fee):
         super().__init__(balance)
         self.fee = float(fee)
+
+    #subtracts fee from the account balance
+    def credit(self, amount):
+        self.balance += amount
+        self.balance -= self.fee
