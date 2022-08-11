@@ -14,8 +14,10 @@ class Account:
         def debit(self, amount):
             if self.balance < amount:
                 print("Insufficient funds")
+                return False
             else:
                 self.balance -= float(amount)
+                return True
 
         #returns the current balance
         def get_balance(self):
