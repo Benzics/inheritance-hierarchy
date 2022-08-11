@@ -20,3 +20,9 @@ class Account:
         #returns the current balance
         def get_balance(self):
             return self.balance
+
+
+class Savings_Account(Account):
+    def __init__(self, balance, interest):
+        super().__init__(balance)
+        self.interest = interest
