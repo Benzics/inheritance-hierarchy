@@ -9,3 +9,10 @@ class Account:
         #credit method to add to the account balance
         def credit(self, amount):
             self.balance += float(amount)
+
+        #debit method that debits from the account balance
+        def debit(self, amount):
+            if self.balance < amount:
+                print("Insufficient funds")
+            else:
+                self.balance -= float(amount)
