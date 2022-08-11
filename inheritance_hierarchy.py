@@ -43,3 +43,7 @@ class Checking_Account(Account):
     def credit(self, amount):
         super().credit(amount)
         self.balance -= self.fee
+
+    def debit(self, amount):
+        if super().debit(amount):
+            self.balance -= self.fee
