@@ -1,22 +1,22 @@
 class Account:
-    def __init__(self, balance):
+    def __init__(self, balance: float):
         if balance < 0.0:
             print("The initial balance is invalid")
-            self.balance = float(0.0)
+            self.balance = 0.0
         else:
-            self.balance = float(balance)
+            self.balance = balance
 
     #credit method to add to the account balance
-    def credit(self, amount):
-        self.balance += float(amount)
+    def credit(self, amount: float):
+        self.balance += amount
 
     #debit method that debits from the account balance
-    def debit(self, amount):
+    def debit(self, amount: float):
         if self.balance < amount:
             print("Insufficient funds")
             return False
         else:
-            self.balance -= float(amount)
+            self.balance -= amount
             return True
 
     #returns the current balance
@@ -25,19 +25,19 @@ class Account:
 
 
 class Savings_Account(Account):
-    def __init__(self, balance, interest):
+    def __init__(self, balance: float, interest: float):
         super().__init__(balance)
-        self.interest = float(interest)
+        self.interest = interest
 
     def calculate_interest(self):
         interest_earned = self.interest * self.balance
-        return float(interest_earned)
+        return interest_earned
 
 
 class Checking_Account(Account):
-    def __init__(self, balance, fee):
+    def __init__(self, balance: float, fee: float):
         super().__init__(balance)
-        self.fee = float(fee)
+        self.fee = fee
 
     #subtracts fee from the account balance
     def credit(self, amount):
